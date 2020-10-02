@@ -13,11 +13,11 @@ The IoT Using LoRaWAN system aims to deliver the following outcomes:
 
 The following high level system architecture diagram portrays the system:
 
-![High Level Architecture Diagram](https://octodex.github.com/images/yaktocat.png)
+![High Level Architecture Diagram](https://raw.githubusercontent.com/oreimu/IoT-Using-LoRaWAN-Uni-Project/master/images/figure2.jpg?token=AN6KF5Z4733KWPGO76YTT627O2MGS)
 
 The files contained in this repository pertain to the functionality of the machine learning module that ran on the Raspberry Pi, including the training and testing of the model and the final program that ran on the pi `machineLearning.py`. The model was trained/generated in `trainModel.py` using large amounts of accelerometer data contained within a .csv file i.e. `Train_Huge.csv` then saved as `ML_Model5.h5`. This model is then used in `testModel.py` and tested against a smaller dataset of accelerometer data i.e. `test_accelerometer_data.csv` and generates a confusion matrix to show the accuracy of the model.
 
-![Confusion Matrix](https://octodex.github.com/images/yaktocat.png)
+![Confusion Matrix](https://raw.githubusercontent.com/oreimu/IoT-Using-LoRaWAN-Uni-Project/master/images/Confusion%20Matrix.png?token=AN6KF5ZYO4MW5RF3RVCDRG27O2MF4)
 
 ## Methods Reference 
 

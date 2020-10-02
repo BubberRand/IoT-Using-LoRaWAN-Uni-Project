@@ -23,13 +23,13 @@ The files contained in this repository pertain to the functionality of the machi
 
 Below listed are all the Objects and their methods developed for this project for `machineLearning.py`: 
 
-**Function: add_feature(data)** 
-This function is used to add features to the data. In the current method four features have been added which are Magnitude_vector, Axis1*Axis2, Axis2*Axis3, Axis1*Axis3. It has only one input parameter which is the whole raw data 
-**Function: test_preprocess(time_steps,step)** 
-This function is used to pre-process the test data in a way which the CNN model receive. The two input parameters time_steps and step both denotes the frequency of the data. For example: In the sample human data; the data is recorded with the frequency of 30Hz. So the value of time_steps and step will be 30. 
-**Function: label_output(max_y_pred_test, step)** 
-This function is used after the model has run it’s prediction and in the process compressed the predicted activity by a factor of 30. So this function reinflates the data so that it can be added back into the dataframe, by taking the max_y_pred_test as an argument and step as 1. 
-**Function: Dataframe_trim(data, step_size)** 
-This function is used to trim the pandas dataframe so that the predicted activity data can be added to the dataframe. As due to a limitation with pandas dataframe when adding columns to a dataframe the number of rows of the column being added and dataframe itself must match. So the method takes data as an input parameter and step_size as 30; matching the time_steps in test_preprocessing.
+* **Function: add_feature(data)**
+  This function is used to add features to the data. In the current method four features have been added which are Magnitude_vector, Axis1*Axis2, Axis2*Axis3, Axis1*Axis3. It has only one input parameter which is the whole raw data
+* **Function: test_preprocess(time_steps,step)**
+  This function is used to pre-process the test data in a way which the CNN model receive. The two input parameters time_steps and step both denotes the frequency of the data. For example: In the sample human data; the data is recorded with the frequency of 30Hz. So the value of time_steps and step will be 30.
+* **Function: label_output(max_y_pred_test, step)**
+  This function is used after the model has run it’s prediction and in the process compressed the predicted activity by a factor of 30. So this function reinflates the data so that it can be added back into the dataframe, by taking the max_y_pred_test as an argument and step as 1.
+* **Function: Dataframe_trim(data, step_size)**
+  This function is used to trim the pandas dataframe so that the predicted activity data can be added to the dataframe. As due to a limitation with pandas dataframe when adding columns to a dataframe the number of rows of the column being added and dataframe itself must match. So the method takes data as an input parameter and step_size as 30; matching the time_steps in test_preprocessing.
 
 *Note: Due to time constraints for the project, we were unable to resolve an issue in saving data from the sensors on to the raspberry pi. Thus we were forced to send data from the network to our cloud platfrom, then pull data back from the platfrom to perform machine learning algorithms then send it back. Regardless, in order prove the proof of concept in time to the client it was necessary.*
